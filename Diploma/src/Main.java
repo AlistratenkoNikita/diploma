@@ -31,7 +31,7 @@ public class Main {
                     vacI[i-1],
                     Data.INTENSITY_INFLUENZA_TRANSMISSION[i-1],
                     Data.TOTAL_POPULATION,
-                    Data.VACCINE_V_PARAM[i-1]
+                    vacVParam[i-1]
             );
 
             vacI[i] = VaccineModel.calculateNextI(
@@ -44,7 +44,7 @@ public class Main {
             vacV[i] = VaccineModel.calculateNextV(
                     vacS[i-1],
                     vacV[i-1],
-                    Data.VACCINE_V_PARAM[i-1]
+                    vacVParam[i-1]
             );
         }
 
@@ -60,7 +60,7 @@ public class Main {
 
         System.out.println("ГРАНИЧНАЯ ВЫГОДА");
         for (int i = 0; i < 12; i++) {
-            System.out.println(Data.MONTHS[i] + ":  \t MB = " + Math.abs(noVacI[i] - vacI[i])*vacV[i]);
+            System.out.println(Data.MONTHS[i] + ":  \t MB = " + Math.abs(noVacI[i] - vacI[i])/vacV[i]);
         }
     }
 }

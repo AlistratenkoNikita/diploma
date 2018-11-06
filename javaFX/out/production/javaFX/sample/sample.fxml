@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import sample.*?>
+
+<AnchorPane id="anchorPane" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="800.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.MainController">
+   <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+      <Tab text="Input">
+         <AnchorPane fx:id="inputAnchor" minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="742.0">
+            <AnchorPane fx:id="bettaAnchor" layoutX="2.0" layoutY="1.0" prefHeight="553.0"
+                        prefWidth="213.0">
+               <Label layoutX="14.0" layoutY="10.0" prefHeight="35.0" prefWidth="65.0" text="Betta 1"/>
+               <Label layoutX="14.0" layoutY="55.0" prefHeight="35.0" prefWidth="65.0" text="Betta 2"/>
+               <Label layoutX="14.0" layoutY="100.0" prefHeight="35.0" prefWidth="65.0" text="Betta 3"/>
+               <Label layoutX="14.0" layoutY="145.0" prefHeight="35.0" prefWidth="65.0" text="Betta 4"/>
+               <Label layoutX="14.0" layoutY="190.0" prefHeight="35.0" prefWidth="65.0" text="Betta 5"/>
+               <Label layoutX="14.0" layoutY="235.0" prefHeight="35.0" prefWidth="65.0" text="Betta 6"/>
+               <Label layoutX="14.0" layoutY="280.0" prefHeight="35.0" prefWidth="65.0" text="Betta 7"/>
+               <Label layoutX="14.0" layoutY="325.0" prefHeight="35.0" prefWidth="65.0" text="Betta 8"/>
+               <Label layoutX="14.0" layoutY="370.0" prefHeight="35.0" prefWidth="65.0" text="Betta 9"/>
+               <Label layoutX="14.0" layoutY="415.0" prefHeight="35.0" prefWidth="65.0" text="Betta 10"/>
+               <Label layoutX="14.0" layoutY="460.0" prefHeight="35.0" prefWidth="65.0" text="Betta 11"/>
+               <Label layoutX="14.0" layoutY="505.0" prefHeight="35.0" prefWidth="65.0" text="Betta 12"/>
+
+               <TextField fx:id="betta1" layoutX="79.0" layoutY="10.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.880432683"/>
+               <TextField fx:id="betta2" layoutX="79.0" layoutY="55.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.151849973"/>
+               <TextField fx:id="betta3" layoutX="79.0" layoutY="100.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.034879461"/>
+               <TextField fx:id="betta4" layoutX="79.0" layoutY="145.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.243768939"/>
+               <TextField fx:id="betta5" layoutX="79.0" layoutY="190.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.222849328"/>
+               <TextField fx:id="betta6" layoutX="79.0" layoutY="235.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.789035533"/>
+               <TextField fx:id="betta7" layoutX="79.0" layoutY="280.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.517481656"/>
+               <TextField fx:id="betta8" layoutX="79.0" layoutY="325.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.676715936"/>
+               <TextField fx:id="betta9" layoutX="79.0" layoutY="370.0" prefHeight="35.0" prefWidth="150.0"
+                          text="19.32819258"/>
+               <TextField fx:id="betta10" layoutX="79.0" layoutY="415.0" prefHeight="35.0" prefWidth="150.0"
+                          text="5.549064378"/>
+               <TextField fx:id="betta11" layoutX="79.0" layoutY="460.0" prefHeight="35.0" prefWidth="150.0"
+                          text="94.32545033"/>
+               <TextField fx:id="betta12" layoutX="79.0" layoutY="505.0" prefHeight="35.0" prefWidth="150.0"
+                          text="0.743446325"/>
+            </AnchorPane>
+
+            <AnchorPane fx:id="vParamAnchor" layoutX="240.0" layoutY="4.0" prefHeight="553.0"
+                        prefWidth="239.0" style="-fx-background-color: green;">
+               <Label layoutX="14.0" layoutY="10.0" prefHeight="35.0" prefWidth="65.0" text="v 1"/>
+               <Label layoutX="14.0" layoutY="55.0" prefHeight="35.0" prefWidth="65.0" text="v 2"/>
+               <Label layoutX="14.0" layoutY="100.0" prefHeight="35.0" prefWidth="65.0" text="v 3"/>
+               <Label layoutX="14.0" layoutY="145.0" prefHeight="35.0" prefWidth="65.0" text="v 4"/>
+               <Label layoutX="14.0" layoutY="190.0" prefHeight="35.0" prefWidth="65.0" text="v 5"/>
+               <Label layoutX="14.0" layoutY="235.0" prefHeight="35.0" prefWidth="65.0" text="v 6"/>
+               <Label layoutX="14.0" layoutY="280.0" prefHeight="35.0" prefWidth="65.0" text="v 7"/>
+               <Label layoutX="14.0" layoutY="325.0" prefHeight="35.0" prefWidth="65.0" text="v 8"/>
+               <Label layoutX="14.0" layoutY="370.0" prefHeight="35.0" prefWidth="65.0" text="v 9"/>
+               <Label layoutX="14.0" layoutY="415.0" prefHeight="35.0" prefWidth="65.0" text="v 10"/>
+               <Label layoutX="14.0" layoutY="460.0" prefHeight="35.0" prefWidth="65.0" text="v 11"/>
+               <Label layoutX="14.0" layoutY="505.0" prefHeight="35.0" prefWidth="65.0" text="v 12"/>
+               <TextField layoutX="79.0" layoutY="10.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="55.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="100.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="145.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="190.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="235.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="280.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="325.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="370.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="415.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="460.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+               <TextField layoutX="79.0" layoutY="505.0" prefHeight="35.0" prefWidth="150.0" text="0.0"/>
+            </AnchorPane>
+            <Label layoutX="498.0" layoutY="10.0" prefHeight="35.0" prefWidth="130.0"
+                   text="Region population"/>
+            <Label layoutX="498.0" layoutY="55.0" prefHeight="35.0" prefWidth="130.0" text="Start ill"/>
+
+            <TextField fx:id="regionPopulation" layoutX="635.0" layoutY="10.0" prefHeight="35.0"
+                       prefWidth="150.0" text="100000"/>
+            <TextField fx:id="startIllNumber" layoutX="635.0" layoutY="55.0" prefHeight="35.0"
+                       prefWidth="150.0" text="62.6080735298626"/>
+
+            <Button fx:id="calculateNoVacc" layoutX="621.0" layoutY="363.0" mnemonicParsing="false"
+                    onAction="#calculateNoVacc" prefHeight="85.0" prefWidth="173.0">
+               <graphic>
+                  <VBox prefHeight="100.0" prefWidth="80.0">
+                     <Label prefHeight="35.0" prefWidth="150.0" text="Calculate for method"/>
+                     <Label prefHeight="35.0" prefWidth="150.0" text="without vaccines"/>
+                  </VBox>
+               </graphic>
+            </Button>
+            <Button fx:id="calculateVacc" layoutX="621.0" layoutY="457.0" mnemonicParsing="false"
+                    onAction="#calculateVacc" prefHeight="85.0" prefWidth="173.0">
+               <graphic>
+                  <VBox prefHeight="100.0" prefWidth="80.0">
+                     <Label prefHeight="35.0" prefWidth="150.0" text="Calculate for method"/>
+                     <Label prefHeight="35.0" prefWidth="150.0" text="with vaccines"/>
+                  </VBox>
+               </graphic>
+            </Button>
+
+         </AnchorPane>
+      </Tab>
+      <Tab text="No vaccine">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <TableView fx:id="noVaccTable" layoutX="14.0" layoutY="348.0" prefHeight="200.0" prefWidth="769.0">
+               <columns>
+                  <TableColumn prefWidth="202.0" sortable="false" text="Month">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="month"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="271.0" sortable="false" text="Healthy number">
+                     <cellFactory>
+                        <DecimalColumnFactory/>
+                     </cellFactory>
+                     <cellValueFactory>
+                        <PropertyValueFactory property="healthyNumber"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn minWidth="0.0" prefWidth="300.0" sortable="false" text="Ill number">
+                     <cellFactory>
+                        <DecimalColumnFactory/>
+                     </cellFactory>
+                     <cellValueFactory>
+                        <PropertyValueFactory property="illNumber"/>
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <LineChart fx:id="noVaccChart" layoutX="14.0" prefHeight="348.0" prefWidth="766.0">
+               <xAxis>
+                  <CategoryAxis label="Month" side="BOTTOM"/>
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Ill number in region" side="LEFT"/>
+               </yAxis>
+            </LineChart>
+         </AnchorPane>
+      </Tab>
+      <Tab style="-fx-background-color: green;" text="With vaccine">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <TableView fx:id="vaccTable" layoutX="14.0" layoutY="348.0" prefHeight="200.0" prefWidth="769.0">
+               <columns>
+                  <TableColumn prefWidth="154.0" sortable="false" text="Month">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="month"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="206.0" sortable="false" text="Healthy number">
+                     <cellFactory>
+                        <DecimalColumnFactory/>
+                     </cellFactory>
+                     <cellValueFactory>
+                        <PropertyValueFactory property="healthyNumber"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn minWidth="0.0" prefWidth="195.0" sortable="false" text="Ill number">
+                     <cellFactory>
+                        <DecimalColumnFactory/>
+                     </cellFactory>
+                     <cellValueFactory>
+                        <PropertyValueFactory property="illNumber"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn minWidth="0.0" prefWidth="213.0" sortable="false" text="Vaccinated number">
+                     <cellFactory>
+                        <DecimalColumnFactory/>
+                     </cellFactory>
+                     <cellValueFactory>
+                        <PropertyValueFactory property="vaccNumber"/>
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+            <LineChart fx:id="vaccChart" layoutX="14.0" prefHeight="348.0" prefWidth="766.0">
+               <xAxis>
+                  <CategoryAxis label="Month" side="BOTTOM"/>
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Number of people" side="LEFT"/>
+               </yAxis>
+            </LineChart>
+         </AnchorPane>
+      </Tab>
+      <Tab text="Marginal Benefit">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+            <LineChart fx:id="mbChart" layoutX="6.0" prefHeight="345.0" prefWidth="800.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" label="month"/>
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" label="marginal benefit"/>
+               </yAxis>
+            </LineChart>
+            <TableView fx:id="mbTable" layoutY="346.0" prefHeight="215.0" prefWidth="800.0">
+               <columns>
+                  <TableColumn prefWidth="202.0" sortable="false" text="Month">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="month"/>
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="271.0" sortable="false" text="Marginal benefit value">
+                     <cellFactory>
+                        <DecimalColumnFactory/>
+                     </cellFactory>
+                     <cellValueFactory>
+                        <PropertyValueFactory property="mb"/>
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </AnchorPane>
+      </Tab>
+   </TabPane>
+</AnchorPane>

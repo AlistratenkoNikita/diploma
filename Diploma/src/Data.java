@@ -40,5 +40,5 @@ public class Data {
     public static final double[] VACCINE_S = {START_HEALTHY_NUMBER,0,0,0,0,0,0,0,0,0,0,0};
     public static final double[] VACCINE_I = {START_SICK_NUMBER,0,0,0,0,0,0,0,0,0,0,0};
     public static final double[] VACCINE_V = {0,0,0,0,0,0,0,0,0,0,0,0};
-    public static final double[] VACCINE_V_PARAM = {0,1,0,0,0,0,0,0,0,0,0,0};
+    public static final double[] VACCINE_V_PARAM = {1,0,0,0,0,0,0,0,0,0,0,0};
 }
