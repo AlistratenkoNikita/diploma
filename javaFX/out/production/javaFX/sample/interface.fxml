@@ -28,18 +28,18 @@
 
                 <AnchorPane fx:id="bettaAnchor" layoutX="110.0" prefHeight="562.0" prefWidth="160.0"
                             style="-fx-border-color: black; -fx-border-width: 0px 1px 0px 0px">
-                    <TextField layoutX="5.0" layoutY="15.0" prefHeight="30.0" prefWidth="140.0" text="0.880432683"/>
-                    <TextField layoutX="5.0" layoutY="60.0" prefHeight="30.0" prefWidth="140.0" text="0.151849973"/>
-                    <TextField layoutX="5.0" layoutY="105.0" prefHeight="30.0" prefWidth="140.0" text="0.034879461"/>
-                    <TextField layoutX="5.0" layoutY="150.0" prefHeight="30.0" prefWidth="140.0" text="0.243768939"/>
-                    <TextField layoutX="5.0" layoutY="195.0" prefHeight="30.0" prefWidth="140.0" text="0.222849328"/>
-                    <TextField layoutX="5.0" layoutY="240.0" prefHeight="30.0" prefWidth="140.0" text="0.789035533"/>
-                    <TextField layoutX="5.0" layoutY="285.0" prefHeight="30.0" prefWidth="140.0" text="0.517481656"/>
-                    <TextField layoutX="5.0" layoutY="330.0" prefHeight="30.0" prefWidth="140.0" text="0.676715936"/>
-                    <TextField layoutX="5.0" layoutY="375.0" prefHeight="30.0" prefWidth="140.0" text="19.32819258"/>
-                    <TextField layoutX="5.0" layoutY="420.0" prefHeight="30.0" prefWidth="140.0" text="5.549064378"/>
-                    <TextField layoutX="5.0" layoutY="465.0" prefHeight="30.0" prefWidth="140.0" text="94.32545033"/>
-                    <TextField layoutX="5.0" layoutY="510.0" prefHeight="30.0" prefWidth="140.0" text="0.743446325"/>
+                    <TextField layoutX="5.0" layoutY="15.0"  prefHeight="30.0" prefWidth="140.0" text="0.24206139118118800000"/>
+                    <TextField layoutX="5.0" layoutY="60.0"  prefHeight="30.0" prefWidth="140.0" text="0.08068930919722430000"/>
+                    <TextField layoutX="5.0" layoutY="105.0" prefHeight="30.0" prefWidth="140.0" text="0.00079011172380248200"/>
+                    <TextField layoutX="5.0" layoutY="150.0" prefHeight="30.0" prefWidth="140.0" text="0.98549656209040700000"/>
+                    <TextField layoutX="5.0" layoutY="195.0" prefHeight="30.0" prefWidth="140.0" text="0.98545092983357900000"/>
+                    <TextField layoutX="5.0" layoutY="240.0" prefHeight="30.0" prefWidth="140.0" text="0.98523924553809200000"/>
+                    <TextField layoutX="5.0" layoutY="285.0" prefHeight="30.0" prefWidth="140.0" text="0.98508208083816600000"/>
+                    <TextField layoutX="5.0" layoutY="330.0" prefHeight="30.0" prefWidth="140.0" text="0.98541877421964000000"/>
+                    <TextField layoutX="5.0" layoutY="375.0" prefHeight="30.0" prefWidth="140.0" text="122.93232708553100000000"/>
+                    <TextField layoutX="5.0" layoutY="420.0" prefHeight="30.0" prefWidth="140.0" text="2.50173930649855000000"/>
+                    <TextField layoutX="5.0" layoutY="465.0" prefHeight="30.0" prefWidth="140.0" text="84.18243155859050000000"/>
+                    <TextField layoutX="5.0" layoutY="510.0" prefHeight="30.0" prefWidth="140.0" text="3.03723006266924000000"/>
                 </AnchorPane>
 
                 <Label layoutX="280.0" layoutY="15.0" prefHeight="30.0" prefWidth="100.0" text="Vac param 1"/>
@@ -76,7 +76,7 @@
 
                 <Label layoutX="545.0" layoutY="64.0" prefHeight="30.0" prefWidth="100.0" text="Init ill number"/>
                 <TextField fx:id="initIllSize" layoutX="650.0" layoutY="64.0" prefHeight="30.0" prefWidth="140.0"
-                           text="62.6080735298626"/>
+                           text="0.00064172603723881900"/>
 
                 <Button layoutX="557.0" layoutY="419.0" mnemonicParsing="false" prefHeight="111.0" prefWidth="211.0"
                         text="Calculate" onAction="#calculate"/>
@@ -115,7 +115,7 @@
                                         <PropertyValueFactory property="month"/>
                                     </cellValueFactory>
                                 </TableColumn>
-                                <TableColumn prefWidth="165.0" text="Healthy number(no vacc)"
+                               <!-- <TableColumn prefWidth="165.0" text="Healthy number(no vacc)"
                                              resizable="false" sortable="false" style=" -fx-alignment: CENTER">
                                     <cellValueFactory>
                                         <PropertyValueFactory property="healthyNumberNoVacc"/>
@@ -125,6 +125,71 @@
                                              resizable="false" sortable="false" style=" -fx-alignment: CENTER">
                                     <cellValueFactory>
                                         <PropertyValueFactory property="healthyNumberVacc"/>
+                                    </cellValueFactory>
+                                </TableColumn>-->
+                                <TableColumn prefWidth="165.0" text="Ill number(no vacc)"
+                                             resizable="false" sortable="false" style=" -fx-alignment: CENTER">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="illNumberNoVacc"/>
+                                    </cellValueFactory>
+                                    <cellFactory>
+                                        <DoubleCell></DoubleCell>
+                                    </cellFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="165.0" text="Ill number(with vacc)"
+                                             resizable="false" sortable="false" style=" -fx-alignment: CENTER">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="illNumberVacc"/>
+                                    </cellValueFactory>
+                                    <cellFactory>
+                                        <DoubleCell></DoubleCell>
+                                    </cellFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="165.0" text="Vacc number" resizable="false"
+                                             sortable="false" style=" -fx-alignment: CENTER">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="vaccNumber"/>
+                                    </cellValueFactory>
+                                    <cellFactory>
+                                        <DoubleCell></DoubleCell>
+                                    </cellFactory>
+                                </TableColumn>
+                                <TableColumn prefWidth="130.0" text="Marginal benefit" reorderable="false"
+                                             resizable="false" sortable="false" style=" -fx-alignment: CENTER">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="mb"/>
+                                    </cellValueFactory>
+                                    <cellFactory>
+                                        <DoubleCell></DoubleCell>
+                                    </cellFactory>
+                                </TableColumn>
+                            </columns>
+                        </TableView>
+                    </AnchorPane>
+                </ScrollPane>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Debug">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <ScrollPane layoutX="14.0" layoutY="8.0" prefHeight="551.0" prefWidth="783.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="905.0" prefWidth="763.0">
+                        <LineChart fx:id="debugChart" layoutX="9.0" layoutY="30.0" prefHeight="305.0"
+                                   prefWidth="745.0">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" label="month"/>
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" label="Number of people"/>
+                            </yAxis>
+                        </LineChart>
+                        <Label layoutX="302.0" layoutY="14.0" prefHeight="21.0" prefWidth="159.0"
+                               text="No vaccines data chart"/>
+                        <TableView fx:id="debugTable" layoutX="7.0" layoutY="667.0" prefHeight="224.0" prefWidth="750.0">
+                            <columns>
+                                <TableColumn prefWidth="100.0" text="Month" resizable="false" reorderable="false"
+                                             style=" -fx-alignment: CENTER">
+                                    <cellValueFactory>
+                                        <PropertyValueFactory property="month"/>
                                     </cellValueFactory>
                                 </TableColumn>
                                 <TableColumn prefWidth="165.0" text="Ill number(no vacc)"
