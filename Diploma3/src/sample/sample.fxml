@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="anchorPane" maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+       <TabPane fx:id="tabPane" layoutX="6.0" layoutY="7.0" prefHeight="660.0" prefWidth="1190.0" style="-fx-border-width: 0 0 1px 0; -fx-border-color: black" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+              <Tab text="Add region" fx:id="rootTab">
+                 <content>
+                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="789.0" style="-fx-background-color: lightgray">
+                        <children>
+                            <AnchorPane fx:id="bettaAnchor" layoutX="-1.0" layoutY="-1.0" prefHeight="635.0" prefWidth="352.0" style="-fx-border-width: 0 1px 0 0; -fx-border-color: black">
+                               <children>
+
+                                   <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="80.0" text="Betta 1" />
+                                   <Label layoutX="10.0" layoutY="60.0" prefHeight="35.0" prefWidth="80.0" text="Betta 2" />
+                                   <Label layoutX="10.0" layoutY="110.0" prefHeight="35.0" prefWidth="80.0" text="Betta 3" />
+                                   <Label layoutX="10.0" layoutY="160.0" prefHeight="35.0" prefWidth="80.0" text="Betta 4" />
+                                   <Label layoutX="10.0" layoutY="210.0" prefHeight="35.0" prefWidth="80.0" text="Betta 5" />
+                                   <Label layoutX="10.0" layoutY="260.0" prefHeight="35.0" prefWidth="80.0" text="Betta 6" />
+                                   <Label layoutX="10.0" layoutY="310.0" prefHeight="35.0" prefWidth="80.0" text="Betta 7" />
+                                   <Label layoutX="10.0" layoutY="360.0" prefHeight="35.0" prefWidth="80.0" text="Betta 8" />
+                                   <Label layoutX="10.0" layoutY="410.0" prefHeight="35.0" prefWidth="80.0" text="Betta 9" />
+                                   <Label layoutX="10.0" layoutY="460.0" prefHeight="35.0" prefWidth="80.0" text="Betta 10" />
+                                   <Label layoutX="10.0" layoutY="510.0" prefHeight="35.0" prefWidth="80.0" text="Betta 11" />
+                                   <Label layoutX="10.0" layoutY="560.0" prefHeight="35.0" prefWidth="80.0" text="Betta 12" />
+
+                                   <TextField fx:id="betta1" layoutX="100.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta2" layoutX="100.0" layoutY="60.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta3" layoutX="100.0" layoutY="110.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta4" layoutX="100.0" layoutY="160.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta5" layoutX="100.0" layoutY="210.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta6" layoutX="100.0" layoutY="260.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta7" layoutX="100.0" layoutY="310.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta8" layoutX="100.0" layoutY="360.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta9" layoutX="100.0" layoutY="410.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta10" layoutX="100.0" layoutY="460.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta11" layoutX="100.0" layoutY="510.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="betta12" layoutX="100.0" layoutY="560.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                               </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="vaccAnchor" layoutX="351.0" layoutY="-1.0" prefHeight="635.0" prefWidth="352.0" style="-fx-border-width: 0 1px 0 0; -fx-border-color: black">
+                               <children>
+                                   <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 1" />
+                                   <Label layoutX="10.0" layoutY="60.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 2" />
+                                   <Label layoutX="10.0" layoutY="110.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 3" />
+                                   <Label layoutX="10.0" layoutY="160.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 4" />
+                                   <Label layoutX="10.0" layoutY="210.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 5" />
+                                   <Label layoutX="10.0" layoutY="260.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 6" />
+                                   <Label layoutX="10.0" layoutY="310.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 7" />
+                                   <Label layoutX="10.0" layoutY="360.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 8" />
+                                   <Label layoutX="10.0" layoutY="410.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 9" />
+                                   <Label layoutX="10.0" layoutY="460.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 10" />
+                                   <Label layoutX="10.0" layoutY="510.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 11" />
+                                   <Label layoutX="10.0" layoutY="560.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 12" />
+
+                                   <TextField fx:id="vacc1" layoutX="100.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc2" layoutX="100.0" layoutY="60.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc3" layoutX="100.0" layoutY="110.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc4" layoutX="100.0" layoutY="160.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc5" layoutX="100.0" layoutY="210.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc6" layoutX="100.0" layoutY="260.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc7" layoutX="100.0" layoutY="310.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc8" layoutX="100.0" layoutY="360.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc9" layoutX="100.0" layoutY="410.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc10" layoutX="100.0" layoutY="460.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc11" layoutX="100.0" layoutY="510.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                                   <TextField fx:id="vacc12" layoutX="100.0" layoutY="560.0" prefHeight="35.0" prefWidth="200.0" text="0.0"/>
+                               </children>
+                            </AnchorPane>
+                            <AnchorPane layoutX="706.0" layoutY="-1.0" prefHeight="635.0" prefWidth="352.0" style="-fx-border-width: 0 1px 0 0; -fx-border-color: black">
+                               <children>
+                                   <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="80.0" text="Region name" />
+                                   <Label layoutX="10.0" layoutY="60.0" prefHeight="35.0" prefWidth="80.0" text="Population" />
+                                   <Label layoutX="10.0" layoutY="110.0" prefHeight="35.0" prefWidth="100.0" text="Start ill number" />
+
+                                   <TextField fx:id="regionName" layoutX="100.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" />
+                                   <TextField fx:id="population" layoutX="100.0" layoutY="60.0" prefHeight="35.0" prefWidth="200.0" />
+                                   <TextField fx:id="illNumber" layoutX="100.0" layoutY="110.0" prefHeight="35.0" prefWidth="200.0" />
+                              <Button layoutX="28.0" layoutY="482.0" mnemonicParsing="false" onAction="#addRegion" prefHeight="97.0" prefWidth="299.0" text="Add region" />
+                               </children>
+                            </AnchorPane>
+                        </children>
+                     </AnchorPane>
+                 </content>
+              </Tab>
+          </tabs>
+       </TabPane>
+      <Button layoutX="14.0" layoutY="682.0" mnemonicParsing="false" onAction="#clearRegions" prefHeight="98.0" prefWidth="198.0" text="Clear" />
+      <Button layoutX="246.0" layoutY="682.0" mnemonicParsing="false" onAction="#calculate1TimeVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate 1 time vacc" />
+   </children>
+</AnchorPane>
