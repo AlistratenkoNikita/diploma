@@ -1,6 +1,7 @@
 package sample;
 
 public class RegionData {
+    private String name;
     private double[] intensityInfluenzaTransmission;
     private double[] vaccParam;
     private double totalPopulation;
@@ -9,6 +10,7 @@ public class RegionData {
     private double[] s;
     private double[] i;
     private double[] v;
+    private double vacStep;
 
     public static final String[] MONTHS = {
             "січень", "лютий", "березень",
@@ -17,8 +19,10 @@ public class RegionData {
             "жовтень", "листопад", "грудень"
     };
 
-    public RegionData(double[] intensityInfluenzaTransmission, double totalPopulation, double startIllNumber) {
+    public RegionData(String name, double[] intensityInfluenzaTransmission, double totalPopulation, double startIllNumber, double vacStep) {
+        this.name = name;
         this.intensityInfluenzaTransmission = intensityInfluenzaTransmission;
+        this.vacStep = vacStep;
         this.vaccParam = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         this.totalPopulation = totalPopulation;
         this.startIllNumber = startIllNumber;
@@ -28,15 +32,35 @@ public class RegionData {
         this.v = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     }
 
-    public RegionData(double[] intensityInfluenzaTransmission, double totalPopulation, double startIllNumber, double[] vaccParam) {
+    public RegionData(String name, double[] intensityInfluenzaTransmission, double totalPopulation, double startIllNumber, double[] vaccParam, double vacStep) {
+        this.name = name;
         this.intensityInfluenzaTransmission = intensityInfluenzaTransmission;
         this.vaccParam = vaccParam;
         this.totalPopulation = totalPopulation;
         this.startIllNumber = startIllNumber;
+        this.vacStep = vacStep;
         this.startHealthNumber = totalPopulation - startIllNumber;
         this.s = new double[]{startHealthNumber, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         this.i = new double[]{startIllNumber, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
         this.v = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public RegionData setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public double getVacStep() {
+        return vacStep;
+    }
+
+    public RegionData setVacStep(double vacStep) {
+        this.vacStep = vacStep;
+        return this;
     }
 
     public double[] getIntensityInfluenzaTransmission() {
@@ -114,10 +138,12 @@ public class RegionData {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return new RegionData(
+                name,
                 this.intensityInfluenzaTransmission.clone(),
                 this.totalPopulation,
                 this.startIllNumber,
-                this.vaccParam.clone());
+                this.vaccParam.clone(),
+                vacStep);
     }
 
     @Override

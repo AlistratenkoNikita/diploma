@@ -1,6 +1,7 @@
 import javafx.scene.chart.LineChart;
 import javafx.scene.control.TableView;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class Main {
@@ -27,12 +28,59 @@ public class Main {
 //        double[] bestMonth = OneTimeVacc.findBestMonth(vinnuzyaData);
 //        System.out.println(Arrays.toString(bestMonth));
 
-        for (int numberOfVacc = 1; numberOfVacc <= 12; numberOfVacc++) {
+        /*for (int numberOfVacc = 1; numberOfVacc <= 12; numberOfVacc++) {
             for (double step = 0; step <= 1; step+=0.01) {
                 for (int month = 0; month < 12; month++) {
 
                 }
             }
+        }*/
+
+        /*double step = 0.1;
+        double max = 1;
+        double[] arr = new double[12];
+        int m = arr.length;
+        int i = 0;
+
+        int counter = 0;
+        while(i < m){
+            System.out.println(++counter);
+            i = 0;
+            arr[i] += step;
+            while((i < m) && (arr[i] > max)){
+                arr[i] = 0;
+                i++;
+                if (i < m){
+                    arr[i] += step;
+                }
+            }
         }
+*/
+
+        double[] arr = new double[4];
+        double step = 0.5;
+        double max = 1;
+
+        for (double val = step; val <= max ; val+=step) {
+            for (int i = 0; i < arr.length; i++) {
+                double[] ar1 = arr.clone();
+                ar1[i] = round(val, 2);
+                for (int j = i+1; j < arr.length-1; j++) {
+                    double[] cl2 = ar1.clone();
+                    cl2[j] = round(val, 2);
+                    System.out.println(Arrays.toString(cl2));
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    private static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
     }
 }
