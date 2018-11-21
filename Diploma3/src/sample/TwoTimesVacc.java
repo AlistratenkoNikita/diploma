@@ -17,10 +17,12 @@ public class TwoTimesVacc {
         for (double val = data.getVacStep(); val <= max ; val+=data.getVacStep()) {
             for (int i = 0; i < arr.length; i++) {
                 double[] ar1 = arr.clone();
-                ar1[i] = round(val, 2);
+//                ar1[i] = round(val, 2);
+                ar1[i] = val;
                 for (int j = i+1; j < arr.length-1; j++) {
                     double[] cl2 = ar1.clone();
-                    cl2[j] = round(val, 2);
+//                    cl2[j] = round(val, 2);
+                    cl2[j] = val;
                     RegionData dataNoVacc = null;
                     RegionData dataVacc = null;
                     try {

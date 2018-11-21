@@ -11,6 +11,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
@@ -121,8 +123,17 @@ public class Controller implements Initializable {
             mbLabel.setFont(Font.font(20));
             mbLabel.setAlignment(Pos.CENTER);
 
-            Label vaccArr = new Label("Vacc model = " + Arrays.toString(bestMonth));
-            vaccArr.setMinWidth(250);
+            StringBuilder str = new StringBuilder("[");
+            for (int i = 0; i < 12; i++) {
+                str.append(new BigDecimal(bestMonth[i]).setScale(5, RoundingMode.CEILING).toString());
+                if (i != 11){
+                    str.append(", ");
+                }
+            }
+            str.append("]");
+
+            Label vaccArr = new Label("Vacc model = " + str);
+            vaccArr.setMinWidth(500);
             vaccArr.setFont(Font.font(20));
             vaccArr.setAlignment(Pos.CENTER);
 
