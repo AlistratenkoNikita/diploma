@@ -96,12 +96,12 @@ public class RegionData {
     }
 
     public RegionData setIntensityInfluenzaTransmission(double[] intensityInfluenzaTransmission) {
-        this.intensityInfluenzaTransmission = intensityInfluenzaTransmission;
+        this.intensityInfluenzaTransmission = intensityInfluenzaTransmission.clone();
         return this;
     }
 
     public RegionData setVaccParam(double[] vaccParam) {
-        this.vaccParam = vaccParam;
+        this.vaccParam = vaccParam.clone();
         return this;
     }
 

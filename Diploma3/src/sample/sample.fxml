@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="mainAnchor" id="anchorPane" maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane id="anchorPane" fx:id="mainAnchor" maxHeight="800.0" maxWidth="1200.0" minHeight="800.0" minWidth="1200.0" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: white" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
        <TabPane fx:id="tabPane" layoutX="6.0" layoutY="7.0" prefHeight="660.0" prefWidth="1190.0" style="-fx-border-width: 0 0 1px 0; -fx-border-color: black" tabClosingPolicy="UNAVAILABLE">
           <tabs>
@@ -14,7 +14,6 @@
                         <children>
                             <AnchorPane fx:id="bettaAnchor" layoutX="-1.0" layoutY="-1.0" prefHeight="635.0" prefWidth="352.0" style="-fx-border-width: 0 1px 0 0; -fx-border-color: black">
                                <children>
-   
                                       <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="80.0" text="Betta 1" />
                                       <Label layoutX="10.0" layoutY="60.0" prefHeight="35.0" prefWidth="80.0" text="Betta 2" />
                                       <Label layoutX="10.0" layoutY="110.0" prefHeight="35.0" prefWidth="80.0" text="Betta 3" />
@@ -27,7 +26,7 @@
                                       <Label layoutX="10.0" layoutY="460.0" prefHeight="35.0" prefWidth="80.0" text="Betta 10" />
                                       <Label layoutX="10.0" layoutY="510.0" prefHeight="35.0" prefWidth="80.0" text="Betta 11" />
                                       <Label layoutX="10.0" layoutY="560.0" prefHeight="35.0" prefWidth="80.0" text="Betta 12" />
-   
+
                                       <TextField fx:id="betta1" layoutX="100.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" text="0.242061391" />
                                       <TextField fx:id="betta2" layoutX="100.0" layoutY="60.0" prefHeight="35.0" prefWidth="200.0" text="0.080689309" />
                                       <TextField fx:id="betta3" layoutX="100.0" layoutY="110.0" prefHeight="35.0" prefWidth="200.0" text="0.000790112" />
@@ -56,7 +55,7 @@
                                    <Label layoutX="10.0" layoutY="460.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 10" />
                                    <Label layoutX="10.0" layoutY="510.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 11" />
                                    <Label layoutX="10.0" layoutY="560.0" prefHeight="35.0" prefWidth="80.0" text="Vacc 12" />
-   
+
                                    <TextField fx:id="vacc1" layoutX="100.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" text="0.0" />
                                    <TextField fx:id="vacc2" layoutX="100.0" layoutY="60.0" prefHeight="35.0" prefWidth="200.0" text="0.0" />
                                    <TextField fx:id="vacc3" layoutX="100.0" layoutY="110.0" prefHeight="35.0" prefWidth="200.0" text="0.0" />
@@ -116,11 +115,20 @@
                   </ScrollPane>
                </content>
             </Tab>
+            <Tab onSelectionChanged="#disableBottomBar" text="Critical vacc calc">
+               <content>
+                  <ScrollPane fx:id="partitionScrollPane1" prefHeight="600.0" prefWidth="789.0">
+                     <content>
+                        <VBox fx:id="criticalVBox" prefHeight="617.0" prefWidth="1000.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
           </tabs>
        </TabPane>
-      <Button fx:id="clearRegions" layoutX="14.0" layoutY="682.0" mnemonicParsing="false" onAction="#clearRegions" prefHeight="98.0" prefWidth="198.0" text="Clear" />
-      <Button fx:id="oneTimeVaccCalc" layoutX="546.0" layoutY="682.0" mnemonicParsing="false" onAction="#calculate1TimeVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate 1 time vacc" />
-      <Button fx:id="twoTimeVaccCalc" layoutX="814.0" layoutY="682.0" mnemonicParsing="false" onAction="#calculate2TimeVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate 2 times vacc" />
+      <Button fx:id="oneTimeVaccCalc" layoutX="729.0" layoutY="682.0" mnemonicParsing="false" onAction="#calculate1TimeVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate 1 time vacc" />
+      <Button fx:id="twoTimeVaccCalc" layoutX="997.0" layoutY="682.0" mnemonicParsing="false" onAction="#calculate2TimeVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate 2 times vacc" />
       <Button fx:id="partVaccCalc" layoutX="274.0" layoutY="684.0" mnemonicParsing="false" onAction="#calculatePartVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate partition vacc" />
+      <Button fx:id="criticalVaccCalc" layoutX="504.0" layoutY="683.0" mnemonicParsing="false" onAction="#calculateCriticalVacc" prefHeight="98.0" prefWidth="198.0" text="Calculate ciritcal vacc" />
    </children>
 </AnchorPane>

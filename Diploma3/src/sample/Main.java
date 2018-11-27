@@ -27,7 +27,7 @@ public class Main extends Application {
     }
 
     private static void poplateRegions(){
-        double vacStep = 0.0001;
+        double vacStep = 0.1;
 
         RegionData vinnuzka = new RegionData(
                 "Вінницька",
